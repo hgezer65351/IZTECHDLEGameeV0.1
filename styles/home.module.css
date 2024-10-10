@@ -1,0 +1,197 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-size: cover; /* Resim ekranı tamamen kaplasın */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Resmi tekrar ettirme */
+}
+
+.h1 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Butonlar için daha modern bir görünüm */
+.startButton,
+.submitButton,
+.restartButton {
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.startButton:hover,
+.submitButton:hover,
+.restartButton:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    margin-bottom: 8px;
+    font-size: 1.4em;
+}
+
+.input {
+    padding: 12px;
+    font-size: 1em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 320px;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+.datalist {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    transition: box-shadow 0.3s ease;
+}
+
+.successMessage {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.comparisonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.comparisonBox {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 0 0 calc(12.5% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comparisonBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.neutral {
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+
+@media (max-width: 1200px) {
+    .comparisonBox {
+        flex: 0 0 calc(12.5% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .comparisonBox {
+        flex: 0 0 calc(12.5% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .comparisonBox {
+        flex: 0 0 calc(12.5% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .comparisonBox {
+        flex: 0 0 calc(12.5% - 20px);
+    }
+}
+
+.nextTurnAnimation {
+    animation: fadeIn 1s ease-in-out;
+    font-size: 1.5rem;
+    color: blue;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 250px;
+    margin-top: -200px;
+    background-color: rgba(249, 249, 249, 0.1); /* Arka plan rengi ve opaklık eklendi */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-image: url('https://i.hizliresim.com/fqfubx5.jpg'); /* Arka plan resmi */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Resmi tekrar ettirme */
+    background-size: cover; /* Resim ekranı tamamen kaplasın */
+    color: rgb(0, 0, 0);
+}

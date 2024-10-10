@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Beyaz yarı saydam katman */
+  z-index: 1;
+}
+
+.container * {
+  position: relative;
+  z-index: 2;
+}
+
+.imageContainer {
+  width: 150px;
+  height: 150px;
+  margin: 80px 0 80px; /* Yukarıdan daha fazla boşluk eklendi */
+  border: 4px solid #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.gameImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inputContainer {
+  width: 80%;
+  max-width: 400px;
+  margin: 30px 0; /* Yukarıdan ve aşağıdan boşluk eklendi */
+  text-align: center;
+}
+
+.inputBox {
+  width: calc(100% + 2px); /* Suggestions ile hizalanması için genişliği ayarlandı */
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px 8px 0 0; /* Üst köşeler yuvarlak, alt köşeler düz */
+  margin-bottom: 0; /* Input ile suggestions arasında boşluk kaldırıldı */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease;
+}
+
+.inputBox:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.guessButton {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guessButton:hover {
+  background-color: #005bb5;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.guessButton:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #333;
+}
+
+.restartButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restartButton:hover {
+  background-color: #218838;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Input ile suggestions arasındaki boşluk kaldırıldı */
+  border: 2px solid #ccc; /* Input ile aynı genişlikte ve hizalanmış */
+  border-top: none; /* Input ile birleşik görünmesi için üst kenar kaldırıldı */
+  border-radius: 0 0 8px 8px; /* Alt köşeleri yuvarlak */
+  background-color: white;
+  max-height: 150px;
+  overflow-y: auto;
+  width: calc(100% + 32px); /* Suggestions genişliği input ile aynı */
+  position: relative;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}

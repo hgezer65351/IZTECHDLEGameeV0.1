@@ -1,0 +1,96 @@
+/* Arka plan resmi için stil */
+.container1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  padding-top: 100px; /* Üst kısımda boşluk bırak */
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background-image: url('https://i.hizliresim.com/fqfubx5.jpg'); /* Arka plan resmi */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Başlık stili */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #000000; /* Koyu bir renk */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+  text-align: center; /* Başlığı ortala */
+  margin-top: 0; /* Üstten boşluğu sıfırla */
+}
+
+  
+  /* Butonlar için stil */
+  .button {
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #28a745; /* Varsayılan yeşil renk */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Yuvarlak köşeler */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Geçiş efektleri */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Buton gölgelendirme */
+  }
+  
+  .button:hover {
+    background-color: #218838; /* Hover durumunda koyu yeşil */
+    transform: scale(1.05); /* Hover sırasında butonu biraz büyüt */
+  }
+  
+  /* Kazanıldığında ikinci oyun butonu için stil */
+  .button:disabled {
+    background-color: #6c757d; /* Devre dışı bırakıldığında gri */
+    cursor: not-allowed; /* Devre dışı bırakıldığında tıklanamaz */
+  }
+  
+  /* İlk ve ikinci oyun gösterilirken geçişler için animasyon */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Game ve SecondGame bileşenleri için stil */
+  .game, .secondGame {
+    animation: fadeIn 0.5s ease-in-out; /* Yumuşak geçiş animasyonu */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8); /* Hafif şeffaf beyaz arka plan */
+    margin-top: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Medya sorguları ile küçük ekranlar için düzenlemeler */
+  @media (max-width: 768px) {
+    .button {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 1em;
+    }
+    
+    h1 {
+      font-size: 2em;
+    }
+  
+    .game, .secondGame {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+  
